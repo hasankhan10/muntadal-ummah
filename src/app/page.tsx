@@ -138,6 +138,11 @@ export default function Home() {
               </Card>
             ))}
           </div>
+          <div className="text-center mt-12">
+            <Button asChild size="lg" variant="outline" className="font-bold border-2">
+              <Link href="/articles">View All Articles <ArrowRight className="ml-2 h-5 w-5" /></Link>
+            </Button>
+          </div>
         </div>
       </section>
 
