@@ -5,7 +5,7 @@ import Footer from '@/components/footer';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Ummah Central',
+  title: 'Muntadal Ummah',
   description: 'The official website of Muntadal Ummah, an Islamic media and community organization.',
 };
 

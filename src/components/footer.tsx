@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { Landmark, Youtube, Twitter, Facebook, Instagram, Twitch, Linkedin, Ghost, MessageSquare } from "lucide-react";
+import Image from "next/image";
+import { Youtube, Twitter, Facebook, Instagram, Twitch, Linkedin, Ghost, MessageSquare } from "lucide-react";
 
 const mainLinks = [
   { href: '/', label: 'Home' },
@@ -54,6 +55,7 @@ const BlueskyIcon = ({ className }: { className?: string }) => (
 )
 
 export default function Footer() {
+  const logoUrl = "https://scontent.fccu9-4.fna.fbcdn.net/v/t39.30808-6/462008505_122094397670564925_9061815109199907439_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=pP52EraV5gMQ7kNvwG2zqFb&_nc_oc=AdmhIPwXzjTa4GOJqB6b5XtxOJdSg1krr8LNemLQa6F2dzDZrHSL6hcsD01ZfyKQY-o&_nc_zt=23&_nc_ht=scontent.fccu9-4.fna&_nc_gid=Nk9bRGy5d0AFRfsCkpAWtw&oh=00_AfNgzMO_jXomdgEHdjhl-LT4FaKvM6uKOrnOsdcahtBBVg&oe=686ADD51";
   const socialLinks = [
     { href: 'https://www.facebook.com/MuntadalUmmah/', label: 'Facebook', icon: Facebook },
     { href: 'https://www.messenger.com/channel/MuntadalUmmah', label: 'Messenger', icon: MessageSquare },
@@ -74,8 +76,8 @@ export default function Footer() {
         <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
           <div className="md:col-span-1">
             <Link href="/" className="flex items-center gap-2">
-              <Landmark className="h-8 w-8 text-primary" />
-              <span className="font-headline text-2xl font-bold">Ummah Central</span>
+              <Image src={logoUrl} alt="Muntadal Ummah Logo" width={40} height={40} className="h-10 w-10 rounded-full" />
+              <span className="font-headline text-2xl font-bold">Muntadal Ummah</span>
             </Link>
             <p className="mt-4 text-sm text-muted-foreground">
               Nurturing Faith, Fostering Community.
