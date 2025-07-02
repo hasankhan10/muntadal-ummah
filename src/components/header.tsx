@@ -159,21 +159,25 @@ export default function Header() {
       )}
     >
       <div className="container mx-auto flex h-16 items-center">
-        <Link href="/" className="mr-6 flex items-center gap-2">
-          <Image
-            src={logoUrl}
-            alt="Muntadal Ummah Logo"
-            width={40}
-            height={40}
-            className="h-10 w-10 rounded-full"
-          />
-          <span className="font-headline text-lg font-bold">Muntadal Ummah</span>
-        </Link>
+        <div className="flex flex-1 justify-start">
+            <Link href="/" className="flex items-center gap-2">
+                <Image
+                    src={logoUrl}
+                    alt="Muntadal Ummah Logo"
+                    width={40}
+                    height={40}
+                    className="h-10 w-10 rounded-full"
+                />
+                <span className="font-headline text-lg font-bold">Muntadal Ummah</span>
+            </Link>
+        </div>
+        
         <nav className="hidden items-center gap-6 md:flex">
           {navLinks.map((link) => (
             <NavLink key={link.href} {...link} />
           ))}
         </nav>
+        
         <div className="flex flex-1 items-center justify-end gap-2">
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
