@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, MapPin } from "lucide-react";
 import Image from "next/image";
 
 export default function ContactPage() {
@@ -27,24 +27,8 @@ export default function ContactPage() {
               <p className="text-muted-foreground">
                 For general inquiries, please email us. We aim to respond within 24-48 hours.
               </p>
-              <a href="mailto:info@muntadalummah.org" className="text-primary font-medium hover:underline">
-                info@muntadalummah.org
-              </a>
-            </div>
-          </div>
-          <div className="flex items-start gap-4">
-            <div className="flex-shrink-0">
-              <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary text-primary-foreground">
-                <Phone className="h-6 w-6" />
-              </div>
-            </div>
-            <div>
-              <h2 className="text-lg font-semibold">Call Us</h2>
-              <p className="text-muted-foreground">
-                For urgent matters, you can reach us by phone during office hours (9am-5pm).
-              </p>
-              <a href="tel:+1234567890" className="text-primary font-medium hover:underline">
-                +1 (234) 567-890
+              <a href="mailto:muntadalummah@gmail.com" className="text-primary font-medium hover:underline">
+                muntadalummah@gmail.com
               </a>
             </div>
           </div>
@@ -57,9 +41,7 @@ export default function ContactPage() {
             <div>
               <h2 className="text-lg font-semibold">Our Location</h2>
               <p className="text-muted-foreground">
-                123 Islamic Center Way,
-                <br />
-                Community City, 1445H
+                Dhaka, Bangladesh
               </p>
             </div>
           </div>
