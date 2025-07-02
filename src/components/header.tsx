@@ -37,7 +37,7 @@ export default function Header() {
   const UserMenu = () => (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="ghost" className="relative h-10 w-10 rounded-full">
+        <Button variant="ghost" className="relative h-10 w-10 rounded-full hover:bg-white/10">
           <Avatar className="h-10 w-10">
             <AvatarImage src={isLoggedIn ? "https://placehold.co/40x40.png" : "/"} alt="User profile" data-ai-hint="user portrait" />
             <AvatarFallback>
@@ -89,8 +89,8 @@ export default function Header() {
       <Link
         href={href}
         className={cn(
-          'text-sm font-medium transition-colors hover:text-primary',
-          isActive ? 'text-primary' : 'text-muted-foreground'
+          'text-sm font-medium transition-colors hover:text-white/80',
+          isActive ? 'text-white font-bold' : 'text-primary-foreground'
         )}
       >
         {label}
@@ -114,7 +114,7 @@ export default function Header() {
   };
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="sticky top-0 z-50 w-full bg-primary text-primary-foreground">
       <div className="container mx-auto flex h-16 items-center">
         <Link href="/" className="mr-6 flex items-center gap-2">
           <Image src={logoUrl} alt="Muntadal Ummah Logo" width={40} height={40} className="h-10 w-10 rounded-full" />
@@ -128,7 +128,7 @@ export default function Header() {
         <div className="flex flex-1 items-center justify-end gap-2">
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <Button variant="ghost" size="icon">
+              <Button variant="ghost" size="icon" className="hover:bg-white/10">
                 <Globe className="h-5 w-5" />
                 <span className="sr-only">Change language</span>
               </Button>
@@ -146,7 +146,7 @@ export default function Header() {
 
           <Sheet>
             <SheetTrigger asChild>
-              <Button variant="ghost" size="icon" className="md:hidden">
+              <Button variant="ghost" size="icon" className="md:hidden hover:bg-white/10">
                 <Menu className="h-6 w-6" />
                 <span className="sr-only">Toggle navigation menu</span>
               </Button>
