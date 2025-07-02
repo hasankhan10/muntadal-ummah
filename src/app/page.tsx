@@ -66,15 +66,12 @@ export default function Home() {
   return (
     <div className="flex flex-col">
       <section className="relative h-[60vh] min-h-[400px] w-full">
-        <Image
-          src="https://placehold.co/1920x1080.png"
-          alt="Peaceful mosque courtyard"
-          layout="fill"
-          objectFit="cover"
-          className="opacity-20"
+        <div
+          className="absolute inset-0 bg-cover bg-center opacity-20"
+          style={{ backgroundImage: "url('https://placehold.co/1920x1080.png')" }}
           data-ai-hint="mosque courtyard"
         />
-        <div className="container mx-auto flex h-full flex-col items-center justify-center text-center">
+        <div className="relative container mx-auto flex h-full flex-col items-center justify-center text-center">
           <h1 className="font-headline text-4xl md:text-6xl font-bold leading-tight tracking-tight text-primary-foreground bg-primary/70 rounded-lg p-4 shadow-lg">
             Muntadal Ummah
           </h1>
