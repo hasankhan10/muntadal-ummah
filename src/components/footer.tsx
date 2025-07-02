@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Youtube, Twitter, Facebook, Instagram, Twitch, Linkedin, MessageSquare } from "lucide-react";
+import { Youtube, Facebook, Instagram, Twitch, Linkedin, MessageSquare } from "lucide-react";
 
 const mainLinks = [
   { href: '/', label: 'Home' },
@@ -31,68 +31,26 @@ const TiktokIcon = ({ className }: { className?: string }) => (
   </svg>
 );
 
-const ThreadsIcon = ({ className }: { className?: string }) => (
-    <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        className={className}
-    >
-        <path d="M19 7.5c-1.333 -3 -3.667 -4.5 -7 -4.5c-5 0 -8 2.5 -8 9s3.5 9 8 9s7 -4 7 -8.5c0 -4 -1.5 -6.5 -4 -8.5" />
-        <path d="M12 12.5c-1.667 .667 -3.333 .333 -5 -.5" />
-    </svg>
-)
-
-const BlueskyIcon = ({ className }: { className?: string }) => (
-    <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        className={className}
-    >
-        <path d="M3 17c5.167 -2.467 6.833 -7.467 6.833 -11.467c0 -2.544 -1.046 -5.011 -3.12 -6.533c2.074 1.522 3.12 4.011 3.12 6.533c0 4 -1.667 9 -6.833 11.467" />
-        <path d="M21 17c-5.167 -2.467 -6.833 -7.467 -6.833 -11.467c0 -2.544 1.046 -5.011 3.12 -6.533c-2.074 1.522 -3.12 4.011 -3.12 6.533c0 4 1.667 9 6.833 11.467" />
-    </svg>
-)
-
-const SnapchatIcon = ({ className }: { className?: string }) => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="1.5"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-    className={className}
-  >
-    <path d="M12.025 4.008c-2.768 -1.78-4.27 -4.008 -4.27 -4.008c-1.333 3.333 0 6.667 2.667 9.333c-2.667 1.333 -3.556 3.778 -3.556 3.778s1.778 2.667 5.333 1.333c-1.111 2.444 -0.889 5.333 -0.889 5.333s4.444 0 6.222 -4.444c2.667 1.333 4.444 -0.889 4.444 -0.889s-0.889 -3.556 -4.444 -4.444c2.667 -2.667 4 -6.667 2.667 -9.333c0 0 -1.502 2.228 -4.27 4.008z" />
-  </svg>
-);
-
-
 export default function Footer() {
   const logoUrl = "https://scontent.fccu9-4.fna.fbcdn.net/v/t39.30808-6/462008505_122094397670564925_9061815109199907439_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=pP52EraV5gMQ7kNvwG2zqFb&_nc_oc=AdmhIPwXzjTa4GOJqB6b5XtxOJdSg1krr8LNemLQa6F2dzDZrHSL6hcsD01ZfyKQY-o&_nc_zt=23&_nc_ht=scontent.fccu9-4.fna&_nc_gid=Nk9bRGy5d0AFRfsCkpAWtw&oh=00_AfNgzMO_jXomdgEHdjhl-LT4FaKvM6uKOrnOsdcahtBBVg&oe=686ADD51";
-  const socialLinks = [
+  
+  const socialLinks: ({
+    href: string;
+    label: string;
+    icon?: React.ElementType;
+    iconUrl?: string;
+  })[] = [
     { href: 'https://www.facebook.com/MuntadalUmmah/', label: 'Facebook', icon: Facebook },
     { href: 'https://www.messenger.com/channel/MuntadalUmmah', label: 'Messenger', icon: MessageSquare },
     { href: 'https://www.youtube.com/@MuntadalUmmah', label: 'Youtube', icon: Youtube },
     { href: 'https://www.tiktok.com/@muntadalummah', label: 'TikTok', icon: TiktokIcon },
-    { href: 'https://x.com/MuntadalUmmah', label: 'X', icon: Twitter },
+    { href: 'https://x.com/MuntadalUmmah', label: 'X', iconUrl: 'https://cdn-icons-png.flaticon.com/512/5968/5968958.png' },
     { href: 'https://www.instagram.com/muntadalummah/', label: 'Instagram', icon: Instagram },
     { href: 'https://www.twitch.tv/muntadalummah', label: 'Twitch', icon: Twitch },
     { href: 'https://www.linkedin.com/company/muntadalummah/', label: 'Linkedin', icon: Linkedin },
-    { href: 'https://www.threads.net/@muntadalummah', label: 'Threads', icon: ThreadsIcon },
-    { href: 'https://bsky.app/profile/muntadalummah.bsky.social', label: 'Bluesky', icon: BlueskyIcon },
-    { href: 'https://www.snapchat.com/add/muntadalummah', label: 'Snapchat', icon: SnapchatIcon },
+    { href: 'https://www.threads.net/@muntadalummah', label: 'Threads', iconUrl: 'https://cdn-icons-png.flaticon.com/512/12105/12105336.png' },
+    { href: 'https://bsky.app/profile/muntadalummah.bsky.social', label: 'Bluesky', iconUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Bluesky_Logo.svg/900px-Bluesky_Logo.svg.png' },
+    { href: 'https://www.snapchat.com/add/muntadalummah', label: 'Snapchat', iconUrl: 'https://cdn-icons-png.flaticon.com/512/174/174870.png' },
   ];
 
   return (
@@ -145,7 +103,8 @@ export default function Footer() {
                     aria-label={link.label}
                     className="text-muted-foreground hover:text-primary"
                   >
-                    <link.icon className="h-6 w-6" />
+                    {link.icon && <link.icon className="h-6 w-6" />}
+                    {link.iconUrl && <Image src={link.iconUrl} alt={`${link.label} logo`} width={24} height={24} className="h-6 w-6 object-contain" />}
                     <span className="sr-only">{link.label}</span>
                   </Link>
                 ))}
