@@ -65,15 +65,16 @@ export default function ContactPage() {
 
       <div className="mt-16">
         <h2 className="text-center font-headline text-3xl font-bold">Find Us on the Map</h2>
-        <div className="mt-6 aspect-w-16 aspect-h-9 w-full overflow-hidden rounded-lg shadow-xl">
-           <Image
-            src="https://placehold.co/1200x600.png"
-            alt="Map location"
-            width={1200}
-            height={600}
-            className="object-cover"
-            data-ai-hint="world map"
-          />
+        <div className="mt-6 aspect-[16/9] w-full overflow-hidden rounded-lg shadow-xl">
+           <iframe
+              src="https://maps.google.com/maps?q=Dhaka,Bangladesh&t=&z=11&ie=UTF8&iwloc=&output=embed"
+              className="w-full h-full"
+              style={{ border: 0 }}
+              allowFullScreen={true}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Map of Dhaka, Bangladesh"
+            ></iframe>
         </div>
       </div>
     </div>
