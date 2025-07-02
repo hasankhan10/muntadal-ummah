@@ -88,7 +88,7 @@ export default function LiveProgramsPage() {
                 <h2 className="font-headline text-3xl font-bold">Currently Live</h2>
                 <p className="text-muted-foreground">"The Heart of the Believer" with Sheikh Hamza Yusuf</p>
             </div>
-            <div className="aspect-video w-full max-w-4xl mx-auto bg-muted rounded-lg shadow-lg overflow-hidden">
+            <div className="relative aspect-video w-full max-w-4xl mx-auto bg-muted rounded-lg shadow-lg overflow-hidden">
                  <Image
                     src="https://placehold.co/1280x720.png"
                     alt="Live stream placeholder"
@@ -97,6 +97,13 @@ export default function LiveProgramsPage() {
                     className="w-full h-full object-cover"
                     data-ai-hint="video lecture"
                 />
+                <div className="absolute top-4 left-4 flex items-center gap-2 bg-red-600 text-white font-bold text-sm px-3 py-1 rounded-lg">
+                    <span className="relative flex h-3 w-3">
+                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
+                        <span className="relative inline-flex rounded-full h-3 w-3 bg-white"></span>
+                    </span>
+                    LIVE
+                </div>
             </div>
              <div className="text-center mt-16">
                 <h2 className="font-headline text-3xl font-bold">Past Livestreams</h2>

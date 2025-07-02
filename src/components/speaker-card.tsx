@@ -85,7 +85,7 @@ export function SpeakerCard({ speaker }: SpeakerCardProps) {
                   ))}
                 </ul>
               ) : (
-                <p className="text-sm text-muted-foreground text-center py-8">No videos available.</p>
+                <p className="text-sm text-muted-foreground text-center py-8">{name} has not published any videos yet.</p>
               )}
           </TabsContent>
           <TabsContent value="articles" className="mt-4 max-h-60 overflow-y-auto pr-2">
@@ -101,7 +101,7 @@ export function SpeakerCard({ speaker }: SpeakerCardProps) {
                   ))}
                 </ul>
               ) : (
-                <p className="text-sm text-muted-foreground text-center py-8">No articles available.</p>
+                <p className="text-sm text-muted-foreground text-center py-8">{name} has not written any articles yet.</p>
               )}
           </TabsContent>
         </Tabs>
