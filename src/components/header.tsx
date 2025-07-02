@@ -4,7 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import * as React from 'react';
 import { Button } from '@/components/ui/button';
-import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import { Sheet, SheetContent, SheetTitle, SheetTrigger } from '@/components/ui/sheet';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -152,7 +152,8 @@ export default function Header() {
               </Button>
             </SheetTrigger>
             <SheetContent side="left">
-              <div className="flex flex-col p-6">
+              <SheetTitle className="sr-only">Menu</SheetTitle>
+              <div className="flex h-full flex-col">
                 <Link href="/" className="mb-8 flex items-center gap-2">
                    <Image src={logoUrl} alt="Muntadal Ummah Logo" width={40} height={40} className="h-10 w-10 rounded-full" />
                   <span className="font-headline text-lg font-bold">Muntadal Ummah</span>
@@ -162,7 +163,7 @@ export default function Header() {
                     <MobileNavLink key={link.href} {...link} />
                   ))}
                 </nav>
-                 <div className="mt-8 border-t pt-6">
+                 <div className="mt-auto border-t pt-6">
                    {isLoggedIn ? (
                      <Button onClick={() => setIsLoggedIn(false)} className="w-full">Log Out</Button>
                    ) : (
